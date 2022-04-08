@@ -11,6 +11,9 @@
 
 .header__logo{
     display: none;
+    cursor: pointer;
+    height: 27px;
+    width: 124px;
 }
 
 .header__iconmenu{
@@ -51,6 +54,10 @@
     height: 28px;
     justify-content: center;
     width: 113px;
+    height: 52px;
+    border: none;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .header__right__lorem{
@@ -75,10 +82,7 @@
     }
 
     .header__logo{
-        cursor: pointer;
         display: block;
-        height: 27px;
-        width: 124px;
     }
 
     .header__iconmenu{
@@ -90,13 +94,13 @@
         width: 100%;
     }
 
+    .header__right__link{
+        display: block;
+    }
+
     .header__right__lorem{
         height: 37px;
         width: 138px;
-    }
-
-    .header__right__link{
-        display: block;
     }
     
 }
