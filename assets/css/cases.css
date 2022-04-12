@@ -1,8 +1,8 @@
 .cases{
     display: flex;
     flex-direction: column;
-    padding: 18px;
     align-items: center;
+    padding: 18px;
 }
 
 .cases__titulo{
@@ -86,17 +86,29 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .cases__titulo{
+        margin: 46px 0px;
+        font-size: 40px;
+    }
+    
     .cases__wrapper{
         flex-direction: row;
         max-width: 1240px;
         justify-content: space-between;
         width: 100%;
     }
+    
+    .cases__wrapper__box{
+        flex-direction: column-reverse;
+        text-align: center;
+        border: 0px;
+    }
 
     .cases__wrapper__box__titulo{
         position: relative;
         font-size: 27px;
     }
+
     .cases__wrapper__box__titulo::after{
         content: "";
         display: block;
@@ -112,23 +124,25 @@
     .cases__wrapper__box__paragrafo{
         margin-top: 40px;
         margin-bottom: 32px;
-        font-size: 20px;
     }
 
-    .cases__wrapper__box{
-        flex-direction: column-reverse;
-        text-align: center;
-        border: 0px;
+    .cases__wrapper__box__button{
+        font-weight: 600;
     }
 
-    .cases__titulo{
-        margin: 46px 0px;
-        font-size: 40px;
+    .cases__wrapper__box__button--verde{
+        border: 2px solid #7FBA00;
     }
-
+    .cases__wrapper__box__button--azul{
+        border: 2px solid #00A4EF;
+    }
+    
+    .cases__wrapper__box__button--laranja{
+        border: 2px solid #FFB900;
+    }
+    
     .cases__wrapper__box__ilustracao{
         width: 160px;
         height: 160px;
     }
-
 }
