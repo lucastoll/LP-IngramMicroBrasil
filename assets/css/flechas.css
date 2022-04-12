@@ -12,6 +12,9 @@
     color: var(--cinzatexto);
     text-align: center;
     line-break: auto;
+    max-width: 321px;
+    line-height: 24px;
+
 }
 
 .flechas__paragrafo + .flechas__paragrafo{
@@ -112,6 +115,7 @@
     font-size: 12px;
     color: #ffffff;
     font-weight: 200;
+    line-height: 20px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -132,6 +136,7 @@
     
     .flechas__paragrafo{
         font-size: 20px;
+        max-width: 1240px;
     }
 
     .flechas__titulo{

@@ -10,6 +10,7 @@
     width: calc(100% - 36px);
     padding: 0px 18px;
     height: 224px;
+    margin-top: 48px;
 }
 
 .banner__paragrafo{
