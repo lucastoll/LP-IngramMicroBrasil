@@ -29,7 +29,6 @@
 .flechas__box__grid{
     display: grid;
     grid-template-columns: 1fr;
-    padding: 18px;
 }
 
 .flechas__box{
