@@ -1,3 +1,7 @@
+main{
+    padding-top: 48px;
+}
+
 .header{
     align-items: center;
     background: #2571B7;
@@ -8,6 +12,8 @@
     padding: 0px 18px;
     width: 100%;
     color: #FFFFFF;
+    position: fixed;
+    z-index: 1;
 }
 
 .header__logo{
@@ -76,6 +82,11 @@
 }
 
 @media screen and (min-width: 1024px) {
+    main{
+        padding-top: 80px;
+    }
+    
+    
     .header{
         height: 80px;
         padding: 0px 120px;

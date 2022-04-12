@@ -1,0 +1,24 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.footer__imagens{
+    display: flex;
+    gap: 30px;
+    max-width: 321px;
+}
+
+.footer__imagens img{
+    width: 125px;
+}
+
+.footer__paragrafo{
+    color: #848484;
+    font-size: 12px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}

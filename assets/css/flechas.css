@@ -13,7 +13,7 @@
     text-align: center;
     line-break: auto;
     max-width: 321px;
-    line-height: 24px;
+    line-height: 20px;
 
 }
 
@@ -37,7 +37,7 @@
 .flechas__box{
     width: 100%;
     max-width: 324px;
-    height: 124px;
+    height: 134px;
     margin: 18px 0px;
     padding: 18px;
     box-sizing: border-box;
