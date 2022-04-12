@@ -38,9 +38,10 @@
     margin: 18px 0px;
     padding: 18px;
     box-sizing: border-box;
-    display: flex;
+    display: grid;
+    grid-template-columns: 50px 1fr;
     align-items: center;
-    gap: 11px;
+    gap: 20px;
 }
 
 .flechas__box:nth-of-type(1){
@@ -90,7 +91,9 @@
     width: 49px;
     height: 49px;
     background: url(../img/flecha64.png);
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .flechas__box__texto{
@@ -108,7 +111,6 @@
 .flechas__box__paragrafo{
     font-size: 12px;
     color: #ffffff;
-    width: 225px;
     font-weight: 200;
 }
 
@@ -125,6 +127,7 @@
         width: 100%;
         margin: 0px;
         max-width: 100%;
+        grid-template-columns: 65px 1fr;
     }
     
     .flechas__paragrafo{
@@ -138,9 +141,7 @@
 
 
     .flechas__box__ilustracao{
-        background-repeat: no-repeat;
-        background-position: center center;
-        width: 103px;
+        width: 64px;
         height: 64px;
     }
     
@@ -167,18 +168,18 @@
 
 
     .flechas__box:nth-of-type(7){
-        display: flex;
+        display: grid;
     }
     
     .flechas__box:nth-of-type(8){
-        display: flex;
+        display: grid;
     }
     
     .flechas__box:nth-of-type(9){
-        display: flex;
+        display: grid;
     }
     
     .flechas__box:nth-of-type(10){
-        display: flex;
+        display: grid;
     }
 }
