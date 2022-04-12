@@ -1,0 +1,134 @@
+.cases{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    align-items: center;
+}
+
+.cases__titulo{
+    color: var(--azulprincipal);
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.cases__wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.cases__wrapper__box{
+    display: flex;
+    padding-bottom: 21px;
+    border-bottom: 3px solid #dfdfdf;
+    max-width: 321px;
+    margin-bottom: 21px;
+    gap: 18px;
+}
+
+.cases__wrapper__box__titulo{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cases__wrapper__box__titulo--verde{
+    color: #7FBA00;
+}
+
+.cases__wrapper__box__titulo--azul{
+    color: #00A4EF;
+}
+
+.cases__wrapper__box__titulo--laranja{
+    color: #FFB900;
+}
+
+
+.cases__wrapper__box__paragrafo{
+    margin: 18px 0px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--cinzatexto);
+    width: 100%;
+}
+
+.cases__wrapper__box__button{
+    background: #FFFFFF;
+    font-size: 15px;
+    height: 40px;
+    padding: 10px 5px;
+    text-decoration: none;
+    width: 110px;
+    transition: background 0.3s ease;
+}
+
+.cases__wrapper__box__button:hover{
+    background: #e7e7e7;
+}
+
+.cases__wrapper__box__button--verde{
+    border: 1px solid #7FBA00;
+    color: #7FBA00;
+}
+.cases__wrapper__box__button--azul{
+    border: 1px solid #00A4EF;
+    color: #00A4EF;
+}
+
+.cases__wrapper__box__button--laranja{
+    border: 1px solid #FFB900;
+    color: #FFB900;
+}
+
+.cases__wrapper__box__ilustracao{
+    align-self: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .cases__wrapper{
+        flex-direction: row;
+        max-width: 1240px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cases__wrapper__box__titulo{
+        position: relative;
+        font-size: 27px;
+    }
+    .cases__wrapper__box__titulo::after{
+        content: "";
+        display: block;
+        background: #DEDEDE;
+        height: 4px;
+        width: 51px;
+        position: absolute;
+        left: 50%;
+        bottom: -22px;
+        transform: translate(-50%, -50%);
+    }
+
+    .cases__wrapper__box__paragrafo{
+        margin-top: 40px;
+        margin-bottom: 32px;
+        font-size: 20px;
+    }
+
+    .cases__wrapper__box{
+        flex-direction: column-reverse;
+        text-align: center;
+        border: 0px;
+    }
+
+    .cases__titulo{
+        margin: 46px 0px;
+        font-size: 40px;
+    }
+
+    .cases__wrapper__box__ilustracao{
+        width: 160px;
+        height: 160px;
+    }
+
+}

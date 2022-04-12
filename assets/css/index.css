@@ -46,7 +46,6 @@ table {
     --azulprincipal: #2571B7;
     --cinzatexto: #737373;
     font-family: "Segoe UI";
-    color: #FFFFFF;
 }
 
 @media(max-width: 1023px) {
