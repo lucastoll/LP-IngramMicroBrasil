@@ -8,7 +8,7 @@
 
 .form__paragrafo{
     color: var(--cinzatexto);
-    font-size: 15px;
+    font-size: 0.9375rem;
     text-align: center;
     margin-bottom: 27px;
     max-width: 321px;
@@ -33,7 +33,7 @@
 
 .form__wrapper__inputBox label{
     margin-bottom: 10px;
-    font-size: 13px;
+    font-size: 0.8125rem;
     color: var(--cinzatexto);
 }
 
@@ -46,7 +46,7 @@
     height: 44px;
     border: none;
     padding: 0px 15px;
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: var(--cinzatexto);
     outline: none;
 }
@@ -66,7 +66,7 @@
     border: none;
     text-decoration: none;
     color: #ffffff;
-    font-size: 21px;
+    font-size: 1.3125rem;
 }
 
 .form__wrapper__button:hover{
@@ -76,6 +76,6 @@
 @media screen and (min-width: 1024px) {
     .form__paragrafo{
         max-width: 1240px;
-        font-size: 24px;
+        font-size: 1.5rem;
     }   
 }

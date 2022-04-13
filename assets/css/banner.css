@@ -15,7 +15,7 @@
 
 .banner__paragrafo{
     color: #ffffff;
-    font-size: 23px;
+    font-size: 1.4375rem;
     text-align: center;
 }
 
@@ -28,7 +28,7 @@
     }
 
     .banner__paragrafo{
-        font-size: 48px;
+        font-size: 3rem;
         max-width: 1200px;
     }
 }

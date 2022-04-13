@@ -8,7 +8,7 @@
 }
 
 .flechas__paragrafo{
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: var(--cinzatexto);
     text-align: center;
     line-break: auto;
@@ -24,7 +24,7 @@
 .flechas__titulo{
     color: var(--azulprincipal);
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
     margin: 30px 0px;
 }
@@ -106,13 +106,13 @@
 }
 
 .flechas__box__titulo{
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #ffffff;
     font-weight: 600;;
 }
 
 .flechas__box__paragrafo{
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #ffffff;
     font-weight: 200;
     line-height: 20px;
@@ -135,13 +135,13 @@
     }
     
     .flechas__paragrafo{
-        font-size: 20px;
+        font-size: 1.25rem;
         max-width: 1240px;
     }
 
     .flechas__titulo{
         margin: 96px 0px 46px 0px;
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
 
@@ -157,11 +157,11 @@
     }
     
     .flechas__box__titulo{
-        font-size: 30px;
+        font-size: 1.875rem;
     }
     
     .flechas__box__paragrafo{
-        font-size: 16px;
+        font-size: 1rem;
         color: #ffffff;
         width: 100%;
         font-weight: 200;

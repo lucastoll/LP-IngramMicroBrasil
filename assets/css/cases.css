@@ -8,7 +8,7 @@
 .cases__titulo{
     color: var(--azulprincipal);
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
     margin-bottom: 36px;
 }
@@ -28,7 +28,7 @@
 }
 
 .cases__wrapper__box__titulo{
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
 }
 
@@ -47,7 +47,7 @@
 
 .cases__wrapper__box__paragrafo{
     margin: 18px 0px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
     color: var(--cinzatexto);
     width: 100%;
@@ -55,7 +55,7 @@
 
 .cases__wrapper__box__button{
     background: #FFFFFF;
-    font-size: 15px;
+    font-size: 0.9375rem;
     height: 40px;
     padding: 10px 5px;
     text-decoration: none;
@@ -88,7 +88,7 @@
 @media screen and (min-width: 1024px) {
     .cases__titulo{
         margin: 46px 0px;
-        font-size: 40px;
+        font-size: 2.5rem;
     }
     
     .cases__wrapper{
@@ -106,7 +106,7 @@
 
     .cases__wrapper__box__titulo{
         position: relative;
-        font-size: 27px;
+        font-size: 1.6875rem;
     }
 
     .cases__wrapper__box__titulo::after{
