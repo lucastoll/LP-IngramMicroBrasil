@@ -14,6 +14,26 @@
     <link rel="stylesheet" href="assets/css/form.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <title>Lorem</title>
+    <style>
+        .amp{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            align-items: center;
+            justify-content: center;    
+        }
+
+        .amp h2 {
+            margin: 50px auto;
+            font-size: 48px;
+        }
+
+        .amp img, .amp video {
+            max-width: 1240px;
+        }
+
+    </style>
 </head>
 <body>
     <header class="header">
@@ -34,12 +54,21 @@
     </header>
     
     <main>
-        <section class="home">
+        <!-- <section class="home">
             <h1 class="home__titulo">Lorem ipsum</h1>
             <p class="home__paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             <button class="home__button">Lorem ipsum</button>
             <img class="home__logo" src="assets/img/logoLorem.png" alt="">
             <a href="#fim"><img class="home__seta" src="assets/img/seta.png"> </a>
+        </section> -->
+
+        <section class="amp">
+            <h2>Amp testing</h2>
+            <h3>size: 2.0mb</h3>
+            <img src="assets/img/ampimg.jpg" alt="">
+            <p>size: 46.9mb</p>
+            <video src="assets/img/ampvideo.webm" loop autoplay controls poster="assets/img/ampthumbnail1.webp"></video>
+
         </section>
 
         <section class="flechas">
@@ -135,8 +164,6 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
 
         <section class="cases">
