@@ -3,7 +3,7 @@
 LP desenvolvida em treinamento.
 
 <ul>
-  <li>Link: https://lucastoll.github.io/LPIngramMicroBrasil/</li>
+  <li>Link: https://lucastoll.github.io/LP-IngramMicroBrasil/</li>
 <ul>
 
 
