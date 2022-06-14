@@ -1,44 +1,902 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html amp lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/home.css">
-    <link rel="stylesheet" href="assets/css/flechas.css">
-    <link rel="stylesheet" href="assets/css/cases.css">
-    <link rel="stylesheet" href="assets/css/retangulos.css">
-    <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/form.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <title>Lorem</title>
-    <style>
-        .amp{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+    html{
+    scroll-behavior: smooth;
+    }
 
-            align-items: center;
-            justify-content: center;    
-        }
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    display: block;
+    }
+    body {
+    line-height: 1;
+    }
+    ol, ul {
+    list-style: none;
+    }
+    blockquote, q {
+    quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    content: '';
+    content: none;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
 
-        .amp h2 {
-            margin: 50px auto;
-            font-size: 48px;
-        }
+    :root{
+    --azulprincipal: #2571B7;
+    --cinzatexto: #737373;
+    font-family: "Segoe UI";
+    }
 
-        .amp img, .amp video {
-            max-width: 1240px;
-            width: 100%;
-        }
+    @media(max-width: 1023px) {
+    html {
+    font-size: 93.75%; 
+    } 
+    }
 
+    @media(max-width: 767px) { 
+    html {
+    font-size: 87.5%;
+    } 
+    }
+
+    main{
+    padding-top: 48px;
+    }
+
+    .header{
+    align-items: center;
+    background: #2571B7;
+    box-sizing: border-box;
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    padding: 0px 18px;
+    width: 100%;
+    color: #FFFFFF;
+    position: fixed;
+    z-index: 1;
+    }
+
+    .header__logo{
+    display: none;
+    cursor: pointer;
+    height: 27px;
+    width: 124px;
+    }
+
+    .header__iconmenu{
+    display: flex;
+    flex-direction: column;
+    height: 18px;
+    justify-content: space-between;
+    width: 24px;
+    }
+
+    .header__iconmenu__barra{
+    background: white;
+    height: 2px;
+    width: 100%;
+    }
+
+    .header__right{
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .header__right__links{
+    display: flex;
+    justify-content: space-between;
+    width: 0px;
+    }
+
+    .header__right__link{
+    cursor: pointer;
+    display: none;
+    transition: color 0.3s ease;
+    }
+
+    .header__right__link:hover{
+    color: #ffffffa1;
+    }
+
+
+    .header__right__button{
+    align-items: center;
+    background: #002050;
+    height: 28px;
+    padding: 0px;
+    justify-content: center;
+    transition: background 0.3s ease;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    color: #ffffff;
+    width: 113px;
+    display: block;
+    }
+
+    .header__right__button:hover{
+    background: #002050af;
+    cursor: pointer;
+    }
+
+    @media screen and (min-width: 1024px) {
+    main{
+    padding-top: 80px;
+    }
+
+
+    .header{
+    height: 80px;
+    padding: 0px 120px;
+    }
+
+    .header__logo{
+    display: block;
+    }
+
+    .header__iconmenu{
+    display: none;
+    }
+
+    .header__right{
+    max-width: 600px;
+    width: 100%;
+    }
+
+    .header__right__links{
+    width: 67%;
+    }
+
+    .header__right__link{
+    display: block;
+    }
+
+    .header__right__lorem{
+    height: 37px;
+    width: 138px;
+    }
+    }
+
+    .home{
+    width: 100%;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0.05) 1%, rgba(0,0,0,0.1) 20%), url(/assets/img/hero.png);
+    background-position: 40% 1%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 48px);
+    justify-content: flex-start;
+    opacity: 0.97;
+    padding: 0px 18px;
+    position: relative;
+    padding-top: 100px;
+    }
+
+    .home__logo{
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    bottom: 28px;
+    }
+
+    .home__seta{
+    display: none;
+    position: absolute;
+    width: 55px;
+    height: 27px;
+    bottom: 62px;
+    animation: seta 1s alternate infinite;
+    }
+
+    @keyframes seta {
+    0%{
+    bottom: 112px;
+    }
+    100%{
+    bottom: 62px;
+    }
+    }
+
+    .home__titulo{
+    font-size: 2.625rem;
+    margin-bottom: 24px;
+    font-weight: 600;
+    margin-top: 147px;
+    }
+
+    .home__paragrafo{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    }
+
+    .home__button{
+    background: #00A4EF;
+    width: 188px;
+    height: 52px;
+    border: none;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3125rem;
+    transition: background 0.3s ease;
+    }
+
+    .home__button:hover{
+    background: #2ebafc;
+    }
+
+    @media screen and (min-width: 1024px) {
+    .home{
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: calc(100vh - 80px);
+
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 120px;
+    }
+
+    .home__logo{
+    width: 220px;
+    height: 50px;
+    bottom: 62px;
+    align-self: flex-end;
+    }
+
+    .home__seta{
+    display: block;
+    }
+
+    .home__titulo{
+    margin-top: 0px;
+    font-size: 5rem;
+    }
+
+    .home__paragrafo{
+    font-size: 2rem;
+    }   
+
+    .home__button{
+    margin-bottom: 100px;
+    }
+
+    }
+
+    .flechas{
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1240px;
+    margin: 0 auto;
+    }
+
+    .flechas__paragrafo{
+    font-size: 0.9375rem;
+    color: var(--cinzatexto);
+    text-align: center;
+    line-break: auto;
+    max-width: 321px;
+    line-height: 20px;
+
+    }
+
+    .flechas__paragrafo + .flechas__paragrafo{
+    margin-top: 20px;
+    }
+
+    .flechas__titulo{
+    color: var(--azulprincipal);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 30px 0px;
+    }
+
+    .flechas__box__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+
+    .flechas__box{
+    width: 100%;
+    max-width: 324px;
+    height: 134px;
+    margin: 18px 0px;
+    padding: 18px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 20px;
+    }
+
+    .flechas__box:nth-of-type(1){
+    background: #0072C6;
+    }
+
+    .flechas__box:nth-of-type(2){
+    background: #2C5898;
+    }
+
+    .flechas__box:nth-of-type(3){
+    background: #207245;
+    }
+    .flechas__box:nth-of-type(4){
+    background: #CB4A32;
+    }
+
+    .flechas__box:nth-of-type(5){
+    background: #733781;
+    }
+
+    .flechas__box:nth-of-type(6){
+    background: #00AFF0;
+    }
+
+    .flechas__box:nth-of-type(7){
+    background: #094ab2;
+    display: none;
+    }
+
+    .flechas__box:nth-of-type(8){
+    background: #0073c6;
+    display: none;
+    }
+
+    .flechas__box:nth-of-type(9){
+    background: #0093be;
+    display: none;
+    }
+
+    .flechas__box:nth-of-type(10){
+    background: #5558AF;
+    display: none;
+    }
+
+    .flechas__box__ilustracao{
+    width: 49px;
+    height: 49px;
+    background: url(/assets/img/flecha64.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    }
+
+    .flechas__box__texto{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    }
+
+    .flechas__box__titulo{
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: 600;;
+    }
+
+    .flechas__box__paragrafo{
+    font-size: 0.75rem;
+    color: #ffffff;
+    font-weight: 200;
+    line-height: 20px;
+    }
+
+    @media screen and (min-width: 1024px) {
+    .flechas__box__grid{
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 48px;
+    grid-row-gap: 24px;
+    width: 100%;
+    margin-top: 24px;
+    }
+
+    .flechas__box{
+    width: 100%;
+    margin: 0px;
+    max-width: 100%;
+    grid-template-columns: 65px 1fr;
+    }
+
+    .flechas__paragrafo{
+    font-size: 1.25rem;
+    max-width: 1240px;
+    }
+
+    .flechas__titulo{
+    margin: 96px 0px 46px 0px;
+    font-size: 2.5rem;
+    }
+
+
+    .flechas__box__ilustracao{
+    width: 64px;
+    height: 64px;
+    }
+
+    .flechas__box__texto{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    }
+
+    .flechas__box__titulo{
+    font-size: 1.875rem;
+    }
+
+    .flechas__box__paragrafo{
+    font-size: 1rem;
+    color: #ffffff;
+    width: 100%;
+    font-weight: 200;
+    }
+
+    .flechas__paragrafo__spanDesktop{
+    color: #F25022;
+    }
+
+
+    .flechas__box:nth-of-type(7){
+    display: grid;
+    }
+
+    .flechas__box:nth-of-type(8){
+    display: grid;
+    }
+
+    .flechas__box:nth-of-type(9){
+    display: grid;
+    }
+
+    .flechas__box:nth-of-type(10){
+    display: grid;
+    }
+    }
+
+    .cases{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+    }
+
+    .cases__titulo{
+    color: var(--azulprincipal);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 36px;
+    }
+
+    .cases__wrapper{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .cases__wrapper__box{
+    display: flex;
+    padding-bottom: 21px;
+    border-bottom: 3px solid #dfdfdf;
+    max-width: 321px;
+    margin-bottom: 21px;
+    gap: 18px;
+    }
+
+    .cases__wrapper__box__titulo{
+    font-size: 1.125rem;
+    font-weight: 600;
+    }
+
+    .cases__wrapper__box__titulo--verde{
+    color: #7FBA00;
+    }
+
+    .cases__wrapper__box__titulo--azul{
+    color: #00A4EF;
+    }
+
+    .cases__wrapper__box__titulo--laranja{
+    color: #FFB900;
+    }
+
+
+    .cases__wrapper__box__paragrafo{
+    margin: 18px 0px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--cinzatexto);
+    width: 100%;
+
+    max-width: 230px;
+    }
+
+    .cases__wrapper__box__button{
+    background: #FFFFFF;
+    font-size: 0.9375rem;
+    height: 40px;
+    padding: 10px 5px;
+    text-decoration: none;
+    width: 110px;
+    transition: background 0.3s ease;
+    }
+
+    .cases__wrapper__box__button:hover{
+    background: #e7e7e7;
+    }
+
+    .cases__wrapper__box__button--verde{
+    border: 1px solid #7FBA00;
+    color: #7FBA00;
+    }
+    .cases__wrapper__box__button--azul{
+    border: 1px solid #00A4EF;
+    color: #00A4EF;
+    }
+
+    .cases__wrapper__box__button--laranja{
+    border: 1px solid #FFB900;
+    color: #FFB900;
+    }
+
+    .cases__wrapper__box__ilustracao{
+    align-self: center;
+    width: 70px;
+    height: 70px;
+    }
+
+    @media screen and (min-width: 1024px) {
+    .cases__titulo{
+    margin: 46px 0px;
+    font-size: 2.5rem;
+    }
+
+    .cases__wrapper{
+    flex-direction: row;
+    max-width: 1240px;
+    justify-content: space-between;
+    width: 100%;
+    }
+
+    .cases__wrapper__box{
+    flex-direction: column-reverse;
+    text-align: center;
+    border: 0px;
+    }
+
+    .cases__wrapper__box__titulo{
+    position: relative;
+    font-size: 1.6875rem;
+    }
+
+    .cases__wrapper__box__titulo::after{
+    content: "";
+    display: block;
+    background: #DEDEDE;
+    height: 4px;
+    width: 51px;
+    position: absolute;
+    left: 50%;
+    bottom: -22px;
+    transform: translate(-50%, -50%);
+    }
+
+    .cases__wrapper__box__paragrafo{
+    margin-top: 40px;
+    margin-bottom: 32px;
+    }
+
+    .cases__wrapper__box__button{
+    font-weight: 600;
+    }
+
+    .cases__wrapper__box__button--verde{
+    border: 2px solid #7FBA00;
+    }
+    .cases__wrapper__box__button--azul{
+    border: 2px solid #00A4EF;
+    }
+
+    .cases__wrapper__box__button--laranja{
+    border: 2px solid #FFB900;
+    }
+
+    .cases__wrapper__box__ilustracao{
+    width: 160px;
+    height: 160px;
+    }
+    }
+
+    .retangulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+    }
+
+    .retangulos__titulo{
+    color: var(--azulprincipal);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 36px;
+    }
+
+    .retangulos__wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 321px;
+    }
+
+    .retangulos__wrapper__box{
+    border: 3px solid #DEDEDE;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 24px;
+    }
+
+    .retangulos__wrapper__box:nth-of-type(1){
+    border-bottom: 0px;
+    }
+
+    .retangulos__wrapper__box:nth-of-type(2){
+    border-bottom: 0px;
+    }
+
+    .retangulos__wrapper__box:nth-of-type(3){
+    border-bottom: 0px;
+    }
+
+
+    .retangulos__wrapper__box__titulo{
+    font-family: 15px;
+    font-weight: 600;
+    color: #F25022;
+    margin-bottom: 18px;
+    }
+
+    .retangulos__wrapper__box__paragrafo{
+    color: var(--cinzatexto);
+    }
+
+    @media screen and (min-width: 1024px) {
+    .retangulos__titulo{
+    margin: 46px 0px;
+    font-size: 2.5rem;
+    }
+
+    .retangulos__wrapper{
+    flex-direction: row;
+    max-width: 1240px;
+    }
+
+    .retangulos__wrapper__box:nth-of-type(1){
+    border-bottom: 3px solid #DEDEDE;
+    }
+
+    .retangulos__wrapper__box:nth-of-type(2){
+    border-left: 0px;
+    border-bottom: 3px solid #DEDEDE;
+    }
+
+    .retangulos__wrapper__box:nth-of-type(3){
+    border-left: 0px;
+    border-bottom: 3px solid #DEDEDE;
+    }
+
+    .retangulos__wrapper__box:nth-of-type(4){
+    border-left: 0px;
+    border-bottom: 3px solid #DEDEDE;
+    }
+    }
+
+    .banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(/assets/img/bannerMobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: calc(100% - 36px);
+    padding: 0px 18px;
+    height: 224px;
+    margin-top: 48px;
+    }
+
+    .banner__paragrafo{
+    color: #ffffff;
+    font-size: 1.4375rem;
+    text-align: center;
+    }
+
+    @media screen and (min-width: 1024px) {
+    .banner{
+    background: url(/assets/img/bannerDesktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+    }
+
+    .banner__paragrafo{
+    font-size: 3rem;
+    max-width: 1200px;
+    }
+    }
+
+    .form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    align-items: center;
+    padding: 18px;
+    }
+
+    .form__paragrafo{
+    color: var(--cinzatexto);
+    font-size: 0.9375rem;
+    text-align: center;
+    margin-bottom: 27px;
+    max-width: 321px;
+    line-height: 24px;
+    }
+
+    .form__wrapper{
+    width: 100%;
+    background: #E6E6E6;
+    padding: 27px 18px 36px 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    max-width: 564px;
+    }
+
+    .form__wrapper__inputBox{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .form__wrapper__inputBox label{
+    margin-bottom: 10px;
+    font-size: 0.8125rem;
+    color: var(--cinzatexto);
+    }
+
+    .form__wrapper__inputBox labe:focus{
+    color: red;
+    }
+
+
+    .form__wrapper__inputBox input{
+    height: 44px;
+    border: none;
+    padding: 0px 15px;
+    font-size: 0.9375rem;
+    color: var(--cinzatexto);
+    outline: none;
+    }
+
+    .form__wrapper__inputBox input:focus{
+    outline: 2px solid var(--azulprincipal)
+    }
+
+    .form__wrapper__button{
+    align-items: center;
+    background: var(--azulprincipal);
+    display: flex;
+    height: 52px;
+    justify-content: center;
+    transition: background 0.3s ease;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3125rem;
+    }
+
+    .form__wrapper__button:hover{
+    background: #2ebafc;
+    }
+
+    @media screen and (min-width: 1024px) {
+    .form__paragrafo{
+    max-width: 1240px;
+    font-size: 1.5rem;
+    }   
+    }
+
+
+    .amp{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;    
+    }
+
+    .amp h2 {
+    margin: 50px auto;
+    font-size: 48px;
+    }
+
+    .amp video, .amp video {
+    max-width: 1240px;
+    width: 100%;
+    }
+
+    .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    }
+
+    .footer__imagens{
+    display: flex;
+    gap: 30px;
+    width: 280px;
+    height: 26px;
+    }
+
+    .footer__paragrafo{
+    color: #848484;
+    font-size: 0.75rem;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    }
     </style>
 </head>
+
 <body>
     <header class="header">
-        <img src="assets/img/logoLorem.png" class="header__logo" alt=""> 
+        <amp-img width="342" height="72" layout="responsive" src="assets/img/logoLorem.png" class="header__logo" alt=""></amp-img>
         <div class="header__iconmenu">
             <div class="header__iconmenu__barra"></div>
             <div class="header__iconmenu__barra"></div>
@@ -53,28 +911,22 @@
             <button class="header__right__button">Lorem Ipsum</button>
         </nav>
     </header>
-    
+
+
     <main>
-        <!-- <section class="home">
+        <section class="home">
             <h1 class="home__titulo">Lorem ipsum</h1>
             <p class="home__paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             <button class="home__button">Lorem ipsum</button>
-            <img class="home__logo" src="assets/img/logoLorem.png" alt="">
+            <div class="home__logo">
+
+            </div>
+            <div class="home__logo" >
+                <amp-img width="342" height="72" layout="responsive" src="assets/img/logoLorem.png" alt=""></amp-img>
+            </div>
             <a href="#fim"><img class="home__seta" src="assets/img/seta.png"> </a>
-        </section> -->
-
-        <section class="amp">
-            <h2>Amp testing</h2>
-            <h3>size: 6.2mb</h3>
-            <img src="assets/img/ampimg3.jpg" alt="">
-            <h3>size: 2.0mb</h3>
-            <img src="assets/img/ampimg.jpg" alt="">
-            <p>size: 46.9mb</p>
-            <video src="assets/img/ampvideo.webm" prelaod loop autoplay muted controls poster="assets/img/ampthumbnail1.webp"></video>
-            
         </section>
-
-        <section class="flechas">
+        <section id="flechas" class="flechas">
             <p class="flechas__paragrafo">
                 <span class="flechas__paragrafo__spanDesktop">Lorem Ipsum</span> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             </p>
@@ -178,7 +1030,9 @@
                         <p class="cases__wrapper__box__paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
                         <button class="cases__wrapper__box__button cases__wrapper__box__button--verde">Lorem Ipsum</button>
                     </div>
-                    <img src="./assets/img/vetorCaseVerde.svg" aria-hidden="true" class="cases__wrapper__box__ilustracao">
+                    <div class="cases__wrapper__box__ilustracao">
+                        <amp-img src="./assets/img/vetorCaseVerde.svg" width="70" height="70" layout="responsive" aria-hidden="true"></amp-img>
+                    </div>
                 </div>
 
                 <div class="cases__wrapper__box">
@@ -187,7 +1041,9 @@
                         <p class="cases__wrapper__box__paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
                         <button class="cases__wrapper__box__button cases__wrapper__box__button--azul">Lorem Ipsum</button>
                     </div>
-                    <img src="./assets/img/vetorCaseAzul.svg" aria-hidden="true" class="cases__wrapper__box__ilustracao">
+                    <div class="cases__wrapper__box__ilustracao">
+                        <amp-img src="./assets/img/vetorCaseAzul.svg" width="70" height="70" layout="responsive" aria-hidden="true"></amp-img>
+                    </div>
                 </div>
 
                 <div class="cases__wrapper__box">
@@ -196,7 +1052,9 @@
                         <p class="cases__wrapper__box__paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
                         <button class="cases__wrapper__box__button cases__wrapper__box__button--laranja">Lorem Ipsum</button>
                     </div>
-                    <img src="./assets/img/vetorCaseLaranja.svg" aria-hidden="true" class="cases__wrapper__box__ilustracao">
+                    <div class="cases__wrapper__box__ilustracao">
+                        <amp-img src="./assets/img/vetorCaseLaranja.svg" width="70" height="70" layout="responsive" aria-hidden="true"></amp-img>
+                    </div>
                 </div>
             </div>
         </section>
@@ -260,11 +1118,16 @@
 
     <footer class="footer" id="fim">
             <div class="footer__imagens">
-                <img src="assets/img/LogoLoremFooter.png" alt="">
-                <img src="assets/img/LogoLoremFooter.png" alt="">
+                <div style="width: 142px; height: 26px;">
+                    <amp-img width="142" height="25" layout="responsive" src="assets/img/LogoLoremFooter.png" alt=""></amp-img>
+                </div>
+                <div style="width: 142px; height: 26px;">
+                    <amp-img width="142" height="25" layout="responsive" src="assets/img/LogoLoremFooter.png" alt=""></amp-img>
+                </div>
             </div>
             <p class="footer__paragrafo">© Copyright Ingram Micro Brasil 2018</p>
     </footer>
+    
 </body>
 </html>
 
